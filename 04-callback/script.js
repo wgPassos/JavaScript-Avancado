@@ -19,12 +19,10 @@ saudacao(ola, "Will");
 let usuarios = ["Adriano", "Maria", "Joao"];
 
 function inserirUsuario (nome, callback) {
-    // setTimeout(() => {
-        //     usuarios.push(nome);
-        //     callback();
-        // }, 1000);
-        usuarios.push(nome);
-        console.log(usuarios);
+    setTimeout(() => {
+            usuarios.push(nome);
+            callback();
+        }, 1000);
     }
     
     function listaUsuarios () {
