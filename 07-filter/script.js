@@ -22,6 +22,14 @@ function menosTrinta (aluno) {
     return aluno.idade < 30;
 }
 
+function maisTrinta (aluno) {
+    return aluno.idade >= 30;
+}
+
 let menoresDeTrinta = alunos.filter(menosTrinta);
+
+let maisTrinta = alunos.filter(maisTrinta);
+
+console.log(maisTrinta);
 
 console.log(menoresDeTrinta);
