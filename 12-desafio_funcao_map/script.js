@@ -12,9 +12,10 @@ componente: "hardware"
 
 let mapProcura = produtos.map(function(item) {
     if (item.preco < 80) {
-    return item.preco += 10;
+        item.preco += 10
+    return document.write(`o ${item.nome} aumentou, o preco é ${item.preco}`);
 } else {
-    return item.preco
+    return document.write(`o ${item.nome} é o mesmo ${item.preco}<br>`);
 }
 })
 
