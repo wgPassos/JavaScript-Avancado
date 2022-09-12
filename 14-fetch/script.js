@@ -1,5 +1,10 @@
-let url = http://economia.awesomeapi.com.br/json/last/USD-BRL
+let url = "http://economia.awesomeapi.com.br/json/last/USD-BRL"
 
-function (url) {
-    console.log(url)
-}
+fetch(url)
+    .then((res) => {
+        // console.log(res);
+        return res.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
