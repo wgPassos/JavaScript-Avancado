@@ -8,17 +8,23 @@
 
 // O código console.log(oi), dará erro e não executará o console.log("boa noite")
 
-try {
-    console.log(oi);
-} catch  {
+// try {
+//     console.log(oi);
+// } catch  {
 
-}
+// }
 
-console.log("Boa noite");
+// console.log("Boa noite");
 
 // Esse código boa noite executará, mesmo com erro no console.log(oi)
 
+let nomezinho = ""
+
 try {
+    if (nomezinho == "") {
+        throw "Houve um erro"
+    }
+    console.log(nomezinho);
     console.log(oi);
 } catch (err) {
     console.log("aqui falho :/", err)
