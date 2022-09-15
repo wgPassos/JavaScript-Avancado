@@ -5,15 +5,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aprendendo Fetch</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <script src='script.js'></script>
 </head>
 <body>
     <h1>Conversor de moedas</h1>
     <form>
-        <input type="number" name="number" id="numberCap">
-        <button onclick="captaNumber()">Converta!</button>
+        <input type="number" name="number" step=".01" id="numberCap">
+        <input type="button" value="Converta!" onclick="captaNumber()">
     </form>
-    <span id="result"></span>
+    <h2 id="result">resultado</h2>
 </body>
 </html>
