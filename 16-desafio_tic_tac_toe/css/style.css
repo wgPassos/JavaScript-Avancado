@@ -1,10 +1,41 @@
-#stage div {
+body {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+}
+
+.big_square {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: darkgray;
+    height: 110px;
+    width: 330px;
 }
 
 .square {
+    /* display: inline-block; */
+    /* margin: 10px 0 0 10px; */
     width: 100px;
     height: 100px;
     background-color: cadetblue;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o {
+
+}
+
+.o::after {
+    content: "\26BD";
+    font-size: 50px;
+}
+
+.x::after {
+    content: "\1F3C8";
+    font-size: 50px;
 }
