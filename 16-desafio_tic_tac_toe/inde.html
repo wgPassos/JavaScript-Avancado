@@ -6,7 +6,6 @@
     <title>Tic tac toe</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <script src='script.js'></script>
 </head>
 <body>
     <h1>Jogo da Velha</h1>
@@ -20,12 +19,14 @@
                 <div class="o"></div>
             </div>
             <div id="2" class="square">
-                <div class="x"></div>
             </div>
         </div>
         <div class="big_square">
             <id id="3" class="square"></id>
-            <id id="4" class="square"></id>
+            <id id="4" class="square">
+                <div class="x"></div>
+
+            </id>
             <id id="5" class="square"></id>
         </div>
         <div class="big_square">
@@ -34,5 +35,8 @@
             <id id="8" class="square"></id>
         </div>
     </main>
+
+    <script src="js/interface.js"></script>
+    <script src="js/control.js"></script>
 </body>
 </html>
