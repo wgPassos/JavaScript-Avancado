@@ -8,5 +8,41 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function handleClick(event) {
+
     console.log(event.target)
+    let position = event.target;
+
+    handleMove(position);
+
+    updateSquares();
+
 }
+
+function updateSquares() {
+
+    // let squares = document.querySelectorAll(".square");
+    // squares.forEach((square) => {
+    //     square.addEventListener("click", );    
+    // console.log(square.id+"oi")
+    // let position = square.id
+    // symbol = boards[position];
+
+    // if (symbol != "") {
+    //     square.innerHTML = `<div class= "${symbol}></div>`
+// }
+
+    let squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        let position = square.id;
+        let symbol = boards[position];
+
+        if (symbol != " ") {
+            square.innerHTML = `<div class='${symbol}'></div>`
+        }
+
+    })
+
+   
+}
+
+
