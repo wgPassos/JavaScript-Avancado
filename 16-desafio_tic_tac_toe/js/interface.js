@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
-        square.addEventListener("click", handleClick);
+        square.addEventListener('click', handleClick);
     })
 
 })
@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleClick(event) {
 
     console.log(event.target)
-    let position = event.target;
+    let square = event.target;
+    let position = square.id;
 
     handleMove(position);
 
@@ -32,6 +33,7 @@ function updateSquares() {
 // }
 
     let squares = document.querySelectorAll(".square");
+    
     squares.forEach((square) => {
         let position = square.id;
         let symbol = boards[position];
