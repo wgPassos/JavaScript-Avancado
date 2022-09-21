@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handleClick(event) {
 
+    if (gameOver) {
+        alert(`Game over! \nO vencedor foi ${playerTime}`)
+    }
+
     console.log(event.target)
     let square = event.target;
     let position = square.id;
@@ -33,7 +37,7 @@ function updateSquares() {
 // }
 
     let squares = document.querySelectorAll(".square");
-    
+
     squares.forEach((square) => {
         let position = square.id;
         let symbol = boards[position];
