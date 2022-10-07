@@ -1,5 +1,5 @@
 // Iniciando as variáveis
-let boards = ["", "", "", "", "", "", "", "", "",]
+let board = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0;
 let gameOver = false;
 
@@ -33,32 +33,23 @@ function handleMove (position) {
             playerTime = 0;
         }
     }
+    return gameOver;
     
 }
 
 function isWin () {
 
-    // winStates.forEach((states => {
-
-    //     console.log(states);
-    //     let seq = states;
-
-    //     let pos1 = seq[0];
-
-    // })
-    
     for (let i = 0; i < winStates.length; i++) {
-        console.log(winStates[i]);
-
         let seq = winStates[i];
-        console.log(winStates[0])
 
         let pos1 = seq[0];
         let pos2 = seq[1];
         let pos3 = seq[2];
 
-        if (boards[pos1] == boards[pos2] && boards[pos1] == boards[pos3] && boards[pos1] != "") {
+        if (board[pos3] == board[pos2] && 
+            board[pos1] == board[pos3] &&
+            board[pos1 != ""]);
             return true;
-        }
     }
+    return false;
 }
