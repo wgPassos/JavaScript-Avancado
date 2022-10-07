@@ -9,18 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handleClick(event) {
 
-    if (gameOver) {
-        alert(`Game over! \nO vencedor foi ${playerTime}`)
-    }
 
     console.log(event.target)
     let square = event.target;
     let position = square.id;
 
-    handleMove(position);
+    if (handleMove(position)) {
+        setTimeout(() => {
+            alert(`Game over! \nO vencedor foi ${playerTime}`)
 
-    updateSquares();
+        })
+    };
 
+    updateSquare(position);
+
+}
+
+function updateSquare (position) {
+    let square = document.getElementById(position.toString());
+    let symbol = boards[position];
+    square.innerHTML = `<div class='${symbol}'></div>`
 }
 
 function updateSquares() {
