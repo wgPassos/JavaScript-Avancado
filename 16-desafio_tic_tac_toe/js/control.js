@@ -1,5 +1,5 @@
 // Iniciando as variáveis
-let board = ["", "", "", "", "", "", "", "", ""];
+let boards = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0;
 let gameOver = false;
 
