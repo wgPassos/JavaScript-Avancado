@@ -27,10 +27,8 @@ function handleMove (position) {
 
         gameOver = isWin();
 
-        if (playerTime == 0) {
-            playerTime = 1;
-        } else {
-            playerTime = 0;
+        if (gameOver == false) {
+            playerTime = (playerTime == 0) ? 1 : 0;
         }
     }
     return gameOver;
@@ -46,9 +44,9 @@ function isWin () {
         let pos2 = seq[1];
         let pos3 = seq[2];
 
-        if (board[pos3] == board[pos2] && 
-            board[pos1] == board[pos3] &&
-            board[pos1 != ""]);
+        if (boards[pos1] == boards[pos2] && 
+            boards[pos1] == boards[pos3] &&
+            boards[pos1 != ""]);
             return true;
     }
     return false;

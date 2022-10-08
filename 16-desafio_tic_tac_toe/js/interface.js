@@ -18,7 +18,7 @@ function handleClick(event) {
         setTimeout(() => {
             alert(`Game over! \nO vencedor foi ${playerTime}`)
 
-        })
+        }, 10);
     };
 
     updateSquare(position);
@@ -31,7 +31,7 @@ function updateSquare (position) {
     square.innerHTML = `<div class='${symbol}'></div>`
 }
 
-function updateSquares() {
+// function updateSquares() {
 
     // let squares = document.querySelectorAll(".square");
     // squares.forEach((square) => {
@@ -44,19 +44,19 @@ function updateSquares() {
     //     square.innerHTML = `<div class= "${symbol}></div>`
 // }
 
-    let squares = document.querySelectorAll(".square");
+//     let squares = document.querySelectorAll(".square");
 
-    squares.forEach((square) => {
-        let position = square.id;
-        let symbol = boards[position];
+//     squares.forEach((square) => {
+//         let position = square.id;
+//         let symbol = boards[position];
 
-        if (symbol != " ") {
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
+//         if (symbol != " ") {
+//             square.innerHTML = `<div class='${symbol}'></div>`
+//         }
 
-    })
+//     })
 
    
-}
+// }
 
 
