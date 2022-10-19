@@ -17,7 +17,6 @@ function handleClick(event) {
     if (handleMove(position)) {
         setTimeout(() => {
             alert(`Game over! \nO vencedor foi ${playerTime} de simbolo: ${playerWin}\nJogada ganhadora: campo ${gameWin[0]}, campo ${gameWin[1]} e campo ${gameWin[2]}`)
-            // ${boards[pos1]}, ${boards[pos2]} e ${boards[pos3]}
 
         }, 10);
     };
@@ -34,32 +33,31 @@ function updateSquare (position) {
     square.innerHTML = `<div class='${symbol}'></div>`
 }
 
-// function updateSquares() {
+let reset = document.querySelector("#reset");
+reset.addEventListener("click", resetGame)
 
-    // let squares = document.querySelectorAll(".square");
-    // squares.forEach((square) => {
-    //     square.addEventListener("click", );    
-    // console.log(square.id+"oi")
-    // let position = square.id
-    // symbol = boards[position];
+function resetGame() {
 
-    // if (symbol != "") {
-    //     square.innerHTML = `<div class= "${symbol}></div>`
-// }
 
-//     let squares = document.querySelectorAll(".square");
+    let squares = document.querySelectorAll(".square");
 
-//     squares.forEach((square) => {
-//         let position = square.id;
-//         let symbol = boards[position];
+    squares.forEach((square) => {
+        let position = square.id;
+        let symbol = boards[position];
+    
 
-//         if (symbol != " ") {
-//             square.innerHTML = `<div class='${symbol}'></div>`
-//         }
+        if (symbol != " ") {
+            square.innerHTML = ``
+        }
 
-//     })
+        gameOver = false;
+        boards = ["", "", "", "", "", "", "", "", ""];
+        gameWin = [];
+   
+
+    })
 
    
-// }
+}
 
 
