@@ -16,17 +16,20 @@ function handleClick(event) {
 
     if (handleMove(position)) {
         setTimeout(() => {
-            alert(`Game over! \nO vencedor foi ${playerTime}`)
+            alert(`Game over! \nO vencedor foi ${playerTime} de simbolo: ${playerWin}\nJogada ganhadora: campo ${gameWin[0]}, campo ${gameWin[1]} e campo ${gameWin[2]}`)
+            // ${boards[pos1]}, ${boards[pos2]} e ${boards[pos3]}
 
         }, 10);
     };
-
+    console.log("antes da function");
     updateSquare(position);
+    console.log("Depois da function");
 
 }
 
 function updateSquare (position) {
     let square = document.getElementById(position.toString());
+    console.log(`${square} eee`);
     let symbol = boards[position];
     square.innerHTML = `<div class='${symbol}'></div>`
 }

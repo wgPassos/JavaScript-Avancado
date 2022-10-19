@@ -14,7 +14,10 @@ let winStates = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6]
-]
+];
+
+let gameWin = [];
+let playerWin = ""
 
 function handleMove (position) {
 
@@ -24,6 +27,7 @@ function handleMove (position) {
 
     if (boards[position] == "") {
         boards[position] = symbols[playerTime];
+        playerWin = symbols[playerTime];
 
         gameOver = isWin();
 
@@ -46,8 +50,10 @@ function isWin () {
 
         if (boards[pos1] == boards[pos2] && 
             boards[pos1] == boards[pos3] &&
-            boards[pos1 != ""]);
+            boards[pos1] != ""){
+            gameWin.push(pos1, pos2, pos3)
             return true;
+        }
     }
     return false;
 }
