@@ -1,5 +1,8 @@
 // Jesus meu salvador! Obrigado Deus!
 let modal = document.querySelector("#modal");
+let result1 = document.querySelector("#result1");
+let result2 = document.querySelector("#result2");
+let result3 = document.querySelector("#result3");
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -31,6 +34,7 @@ function handleClick(event) {
 }
 
 function champion () {
+    result1.innerHTML += 
     modal.style.display = "flex";
 }
 
