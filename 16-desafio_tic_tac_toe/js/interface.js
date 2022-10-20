@@ -1,11 +1,13 @@
-    // Jesus meu salvador! Obrigado Deus!
-    document.addEventListener("DOMContentLoaded", () => {
+// Jesus meu salvador! Obrigado Deus!
+let modal = document.querySelector("#modal");
 
+document.addEventListener("DOMContentLoaded", () => {
+    
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         square.addEventListener('click', handleClick);
     })
-
+    
 })
 
 function handleClick(event) {
@@ -29,7 +31,6 @@ function handleClick(event) {
 }
 
 function champion () {
-    let modal = document.querySelector("#modal");
     modal.style.display = "flex";
 }
 
@@ -60,6 +61,7 @@ function resetGame() {
         gameOver = false;
         boards = ["", "", "", "", "", "", "", "", ""];
         gameWin = [];
+        modal.style.display = "none";
    
 
     })
