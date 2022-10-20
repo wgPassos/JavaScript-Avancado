@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+    // Jesus meu salvador! Obrigado Deus!
+    document.addEventListener("DOMContentLoaded", () => {
 
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
@@ -16,7 +17,8 @@ function handleClick(event) {
 
     if (handleMove(position)) {
         setTimeout(() => {
-            alert(`Game over! \nO vencedor foi ${playerTime} de simbolo: ${playerWin}\nJogada ganhadora: campo ${gameWin[0]}, campo ${gameWin[1]} e campo ${gameWin[2]}`)
+            champion();
+            // alert(`Game over! \nO vencedor foi ${playerTime} de simbolo: ${playerWin}\nJogada ganhadora: campo ${gameWin[0]}, campo ${gameWin[1]} e campo ${gameWin[2]}`)
 
         }, 10);
     };
@@ -24,6 +26,11 @@ function handleClick(event) {
     updateSquare(position);
     console.log("Depois da function");
 
+}
+
+function champion () {
+    let modal = document.querySelector("#modal");
+    modal.style.display = "flex";
 }
 
 function updateSquare (position) {

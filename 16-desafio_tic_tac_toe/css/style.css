@@ -1,7 +1,9 @@
 body {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #030303;
 }
 
 .big_square {
@@ -19,7 +21,8 @@ body {
     /* margin: 10px 0 0 10px; */
     width: 100px;
     height: 100px;
-    background-color: cadetblue;
+    background-color: oldlace;
+    border-radius: 15%;
     border: 1px solid blue;
     display: flex;
     justify-content: center;
@@ -38,4 +41,30 @@ body {
 .x::after {
     content: "\1F3C8";
     font-size: 50px;
+}
+
+#reset {
+    background-color: oldlace;
+    border-radius: 15%;
+    border: solid 2px darkgray ;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+#modal {
+    position: absolute;
+    top: calc(50% - 120px);
+    display:none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10%;
+    background-color: rgba(30, 30, 30, .9);
+    transition: ease-in ;
+}
+
+.font {
+    color: antiquewhite;
 }
