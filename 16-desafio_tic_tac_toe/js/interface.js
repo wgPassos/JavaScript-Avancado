@@ -34,7 +34,10 @@ function handleClick(event) {
 }
 
 function champion () {
-    result1.innerHTML += 
+    result1.innerHTML += playerTime;
+    result2.classList.add(symbols[playerTime]);
+    result2.classList.add("min_ball");
+    // result2.innerHTML +=;
     modal.style.display = "flex";
 }
 
@@ -64,8 +67,12 @@ function resetGame() {
 
         gameOver = false;
         boards = ["", "", "", "", "", "", "", "", ""];
+        playerTime = 0;
         gameWin = [];
         modal.style.display = "none";
+        result1.classList.remove(symbols[playerTime])
+        result2.classList.remove = "";
+
    
 
     })
