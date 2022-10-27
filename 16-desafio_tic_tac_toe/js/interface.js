@@ -35,9 +35,15 @@ function handleClick(event) {
 
 function champion () {
     result1.innerHTML = playerTime;
-    result2.classList.remove(symb)
-    result2.classList.add("min_ball");
-    result2.classList.add(symbols[playerTime]);
+    // result2.classList.remove(symb)
+
+    if (symbols[playerTime] == symbols[0]) {
+        result2.classList.add("ball_soccer");
+    } else {
+        result2.classList.add("ball_nfl");
+    }
+
+    result3.innerHTML = `Campo 1: ${gameWin[0]}, campo 2: ${gameWin[1]}, campo 3: ${gameWin[2]}`;
     // result2.innerHTML +=;
     modal.style.display = "flex";
 }
@@ -72,8 +78,9 @@ function resetGame() {
         gameWin = [];
         modal.style.display = "none";
         result1.classList.remove(symbols[playerTime])
-        result2.classList.remove = "";
-
+        result2.classList.remove("ball_soccer");
+        result2.classList.remove("ball_nfl");
+        
    
 
     })

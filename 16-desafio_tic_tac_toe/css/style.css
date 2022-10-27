@@ -54,6 +54,7 @@ body {
 #modal {
     position: absolute;
     top: calc(50% - 120px);
+    font-size: 10px;
     display:none;
     flex-direction: column;
     justify-content: space-evenly;
@@ -62,14 +63,29 @@ body {
     height: 200px;
     border-radius: 10%;
     background-color: rgba(30, 30, 30, .9);
-    transition: ease-in ;
+    animation: moveModal .4s ease-in ;
+}
+
+@keyframes moveModal {
+    0% {
+        transform: scale(0.3);
+    } 100% {
+        transform: scale(1);
+    }
 }
 
 .font {
     color: antiquewhite;
 }
 
-.min_ball {
-    font-size: 5px !important;
+.ball_soccer::after {
+    content: "\26BD";
+    font-size: 25px;
+
+}
+
+.ball_nfl::after {
+    content: "\1F3C8";
+    font-size: 25px;
 
 }
