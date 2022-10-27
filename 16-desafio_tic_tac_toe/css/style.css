@@ -70,6 +70,6 @@ body {
 }
 
 .min_ball {
-    font-size: 20px;
+    font-size: 5px !important;
 
 }
