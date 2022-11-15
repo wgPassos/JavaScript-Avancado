@@ -1,12 +1,13 @@
 // Jesus meu salvador! Obrigado Deus!
 let modal = document.querySelector("#modal");
+let squares = document.querySelectorAll(".square");
 let result1 = document.querySelector("#result1");
 let result2 = document.querySelector("#result2");
 let result3 = document.querySelector("#result3");
+// let squares = document.querySelectorAll(".square");
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         square.addEventListener('click', handleClick);
     })
@@ -34,6 +35,7 @@ function handleClick(event) {
 }
 
 function champion () {
+    playerTime += 1;
     result1.innerHTML = playerTime;
     // result2.classList.remove(symb)
 
@@ -46,6 +48,7 @@ function champion () {
     result3.innerHTML = `Campo 1: ${gameWin[0]}, campo 2: ${gameWin[1]}, campo 3: ${gameWin[2]}`;
     // result2.innerHTML +=;
     modal.style.display = "flex";
+    reset.style.display = "flex";
 }
 
 function updateSquare (position) {
@@ -59,9 +62,6 @@ let reset = document.querySelector("#reset");
 reset.addEventListener("click", resetGame)
 
 function resetGame() {
-
-
-    let squares = document.querySelectorAll(".square");
 
     squares.forEach((square) => {
         let position = square.id;
@@ -80,7 +80,7 @@ function resetGame() {
         result1.classList.remove(symbols[playerTime])
         result2.classList.remove("ball_soccer");
         result2.classList.remove("ball_nfl");
-        
+        reset.style.display = "none";
    
 
     })
