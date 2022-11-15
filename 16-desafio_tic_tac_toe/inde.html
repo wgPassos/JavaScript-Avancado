@@ -10,27 +10,42 @@
 <body>
     <h1>Jogo da Velha</h1>
 
-    <main id="stage">
-        <div class="big_square">
-            <div id="0" class="square">
+    <div class="game_results">
+
+        <section class="numbers_victories_player1">
+            <p>Vitórias</p>
+            <p>0</p>
+        </section>
+        
+        <main id="stage">
+            <div class="big_square">
+                <div id="0" class="square">
+                </div>
+                <div id="1" class="square">
+                </div>
+                <div id="2" class="square">
+                </div>
             </div>
-            <div id="1" class="square">
+            <div class="big_square">
+                <id id="3" class="square"></id>
+                <id id="4" class="square">
+                </id>
+                <id id="5" class="square"></id>
             </div>
-            <div id="2" class="square">
+            <div class="big_square">
+                <id id="6" class="square"></id>
+                <id id="7" class="square"></id>
+                <id id="8" class="square"></id>
             </div>
-        </div>
-        <div class="big_square">
-            <id id="3" class="square"></id>
-            <id id="4" class="square">
-            </id>
-            <id id="5" class="square"></id>
-        </div>
-        <div class="big_square">
-            <id id="6" class="square"></id>
-            <id id="7" class="square"></id>
-            <id id="8" class="square"></id>
-        </div>
-    </main>
+        </main>
+        
+        <section class="numbers_victories_player2">
+            <p>Vitórias</p>
+            <p>0</p>
+        </section>
+    </div>
+
+    
     <div id="modal">
         <h2 class="font">Game over!</h2>
         <p class="font">Jogador campeão: <span id="result1"></span></p>
@@ -39,6 +54,10 @@
     </div>
     <footer>
         <button id="reset" type="reset">Resetar</button>
+        <section class="draws">
+            <p>Empates</p>
+            <p>0</p>
+        </section>
     </footer>
 
     <script src="js/control.js"></script>

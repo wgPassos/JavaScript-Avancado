@@ -7,6 +7,12 @@ body {
     color: aliceblue;
 }
 
+.game_results {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
 .big_square {
     display: flex;
     flex-direction: row;

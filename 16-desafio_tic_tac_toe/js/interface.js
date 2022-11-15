@@ -89,3 +89,7 @@ function resetGame() {
 }
 
 
+// Falta escrever no jogo:
+
+// - Se não haver vencedor, aparecer um modal empate
+// - Contabilizar contadores de vitórias e empates
