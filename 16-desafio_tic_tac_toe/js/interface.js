@@ -38,9 +38,13 @@ function champion () {
     playerTime += 1;
     result1.innerHTML = playerTime;
     // result2.classList.remove(symb)
+    let victories1 = document.querySelector("#numbers_victories_player1");
+    let victories2 = document.querySelector("#numbers_victories_player2");
+    let draws = document.querySelector("#draws");
 
     if (symbols[playerTime] == symbols[0]) {
         result2.classList.add("ball_soccer");
+        victories1[1].innerHTML += 1;
     } else {
         result2.classList.add("ball_nfl");
     }
@@ -92,4 +96,6 @@ function resetGame() {
 // Falta escrever no jogo:
 
 // - Se não haver vencedor, aparecer um modal empate
+//     Precisa-se verificar todos as posições dentro array boards se são != "" && gameOver == false
 // - Contabilizar contadores de vitórias e empates
+//     Precisa-se usar DOM e pegar como number o numeros de vitorias e ir de operador += 1
