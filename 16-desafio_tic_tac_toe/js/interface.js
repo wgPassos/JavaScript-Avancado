@@ -47,12 +47,12 @@ function champion () {
 
     if (symbols[playerTime] == symbols[0]) {
         result2.classList.add("ball_soccer");
-        victories1.innerHTML = 1;
+        // victories1.innerHTML = 1;
     } else {
         result2.classList.add("ball_nfl");
     }
 
-    result3.innerHTML = `Campo 1: ${gameWin[0]}, campo 2: ${gameWin[1]}, campo 3: ${gameWin[2]}`;
+    result3.innerHTML = `Campo 1: ${gameWin[0]+1}, campo 2: ${gameWin[1]+1}, campo 3: ${gameWin[2]+1}`;
     // result2.innerHTML +=;
     modal.style.display = "flex";
     reset.style.display = "flex";
