@@ -3,8 +3,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #030303;
-    color: aliceblue;
+    background-color: #000814;
+    color: #FFD60A;
 }
 
 .game_results {
@@ -18,7 +18,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
-    background-color: darkgray;
+    background-color: #FFD60A;
     height: 110px;
     width: 330px;
 }
@@ -28,9 +28,9 @@ body {
     /* margin: 10px 0 0 10px; */
     width: 100px;
     height: 100px;
-    background-color: oldlace;
+    background-color: #003566;
     border-radius: 15%;
-    border: 1px solid blue;
+    border: 1px solid #000814;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,9 +52,9 @@ body {
 
 #reset {
     display: none;
-    background-color: oldlace;
+    background-color: #FFD60A;
     border-radius: 15%;
-    border: solid 2px darkgray ;
+    border: solid 2px #000814 ;
     padding: 10px 20px;
     margin-top: 15px;
     animation: moveModal .2s easy-in;
@@ -84,7 +84,7 @@ body {
 }
 
 .font {
-    color: antiquewhite;
+    color: #FFD60A;
 }
 
 .ball_soccer::after {

@@ -36,6 +36,9 @@ function handleClick(event) {
 
 function champion () {
     playerTime += 1;
+    // Tentativa de criar placa de vitórias
+
+    //
     result1.innerHTML = playerTime;
     // result2.classList.remove(symb)
     let victories1 = document.querySelector("#numbers_victories_player1");
@@ -44,7 +47,7 @@ function champion () {
 
     if (symbols[playerTime] == symbols[0]) {
         result2.classList.add("ball_soccer");
-        victories1[1].innerHTML += 1;
+        victories1.innerHTML = 1;
     } else {
         result2.classList.add("ball_nfl");
     }
