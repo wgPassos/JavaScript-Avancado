@@ -6,6 +6,9 @@ let result2 = document.querySelector("#result2");
 let result3 = document.querySelector("#result3");
 // let squares = document.querySelectorAll(".square");
 
+let winsPlayer1 = [];
+let winsPlayer2 = [];
+
 document.addEventListener("DOMContentLoaded", () => {
     
     squares.forEach((square) => {
