@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleClick(event) {
 
 
-    console.log(event.target)
+    // console.log(event.target)
     let square = event.target;
     let position = square.id;
 
@@ -28,18 +28,18 @@ function handleClick(event) {
 
         }, 10);
     };
-    console.log("antes da function");
+    // console.log("antes da function");
     updateSquare(position);
-    console.log("Depois da function");
+    // console.log("Depois da function");
 
 }
 
 function champion () {
-    playerTime += 1;
+    // playerTime += 1;
     // Tentativa de criar placa de vitórias
 
     //
-    result1.innerHTML = playerTime;
+    result1.innerHTML = playerTime + 1;
     // result2.classList.remove(symb)
     let victories1 = document.querySelector("#numbers_victories_player1");
     let victories2 = document.querySelector("#numbers_victories_player2");
@@ -52,7 +52,7 @@ function champion () {
         result2.classList.add("ball_nfl");
     }
 
-    result3.innerHTML = `Campo 1: ${gameWin[0]+1}, campo 2: ${gameWin[1]+1}, campo 3: ${gameWin[2]+1}`;
+    result3.innerHTML = `Campo 1: ${gameWin[0] +1}, campo 2: ${gameWin[1] +1}, campo 3: ${gameWin[2] +1}`;
     // result2.innerHTML +=;
     modal.style.display = "flex";
     reset.style.display = "flex";
@@ -60,7 +60,7 @@ function champion () {
 
 function updateSquare (position) {
     let square = document.getElementById(position.toString());
-    console.log(`${square} eee`);
+    // console.log(`${square} eee`);
     let symbol = boards[position];
     square.innerHTML = `<div class='${symbol}'></div>`
 }
@@ -83,6 +83,7 @@ function resetGame() {
         boards = ["", "", "", "", "", "", "", "", ""];
         playerTime = 0
         gameWin = [];
+        playerWin = ""; // adicionado recente
         modal.style.display = "none";
         result1.classList.remove(symbols[playerTime])
         result2.classList.remove("ball_soccer");

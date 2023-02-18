@@ -72,6 +72,7 @@ body {
     height: 200px;
     border-radius: 10%;
     background-color: rgba(30, 30, 30, .9);
+    backdrop-filter: blur(2px);
     animation: moveModal .2s ease-in ;
 }
 
