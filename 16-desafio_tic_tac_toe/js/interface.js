@@ -6,8 +6,8 @@ let result2 = document.querySelector("#result2");
 let result3 = document.querySelector("#result3");
 // let squares = document.querySelectorAll(".square");
 
-let winsPlayer1 = [];
-let winsPlayer2 = [];
+let winsPlayer1 = 0;
+let winsPlayer2 = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -40,7 +40,11 @@ function handleClick(event) {
 function champion () {
     // playerTime += 1;
     // Tentativa de criar placa de vitórias
-
+    if (playerTime == 0) {
+        winsPlayer1 +=1;
+    } else {
+        winsPlayer2 +=1;
+    }
     //
     result1.innerHTML = playerTime + 1;
     // result2.classList.remove(symb)
@@ -50,9 +54,10 @@ function champion () {
 
     if (symbols[playerTime] == symbols[0]) {
         result2.classList.add("ball_soccer");
-        // victories1.innerHTML = 1;
+        victories1.innerHTML = winsPlayer1;
     } else {
         result2.classList.add("ball_nfl");
+        victories2.innerHTML = winsPlayer2;
     }
 
     result3.innerHTML = `Campo 1: ${gameWin[0] +1}, campo 2: ${gameWin[1] +1}, campo 3: ${gameWin[2] +1}`;
