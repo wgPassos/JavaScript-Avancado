@@ -37,34 +37,44 @@ function handleClick(event) {
 
 }
 
+
 function champion () {
     // playerTime += 1;
     // Tentativa de criar placa de vitórias
-    if (playerTime == 0) {
-        winsPlayer1 +=1;
-    } else {
-        winsPlayer2 +=1;
-    }
     //
     result1.innerHTML = playerTime + 1;
     // result2.classList.remove(symb)
-    let victories1 = document.querySelector("#numbers_victories_player1");
-    let victories2 = document.querySelector("#numbers_victories_player2");
-    let draws = document.querySelector("#draws");
-
+    
     if (symbols[playerTime] == symbols[0]) {
         result2.classList.add("ball_soccer");
-        victories1.innerHTML = winsPlayer1;
     } else {
         result2.classList.add("ball_nfl");
-        victories2.innerHTML = winsPlayer2;
     }
-
+    
     result3.innerHTML = `Campo 1: ${gameWin[0] +1}, campo 2: ${gameWin[1] +1}, campo 3: ${gameWin[2] +1}`;
     // result2.innerHTML +=;
     modal.style.display = "flex";
     reset.style.display = "flex";
+    
+    scoreboard ();
 }
+
+
+function scoreboard () {
+    let draws = document.querySelector("#draws");
+    let victories1 = document.querySelector("#numbers_victories_player1");
+    let victories2 = document.querySelector("#numbers_victories_player2");
+
+    if (playerTime == 0) {
+        winsPlayer1 +=1;
+        victories1.innerHTML = winsPlayer1;
+    } else {
+        winsPlayer2 +=1;
+        victories2.innerHTML = winsPlayer2;
+    }
+    
+}
+
 
 function updateSquare (position) {
     let square = document.getElementById(position.toString());
