@@ -1,5 +1,6 @@
 // Jesus meu salvador! Obrigado Deus!
 let modal = document.querySelector("#modal");
+let modalTwo = document.querySelector("#modalTwo");
 let squares = document.querySelectorAll(".square");
 let result1 = document.querySelector("#result1");
 let result2 = document.querySelector("#result2");
@@ -29,9 +30,9 @@ function handleClick(event) {
             if (result === "win") {
                 champion();
             } else if (result === "draw") {
-                alert('Game over! It\'s a draw!');
+                // alert('Game over! It\'s a draw!');
                 drawCount();
-                resetGame();
+                // resetGame();
             }
         }, 10)
     }
@@ -62,14 +63,14 @@ function champion () {
 }
 
 function drawCount () {
-
+    modalTwo.style.display = "flex";
+    resetTwo.style.display = "flex";
+    
     let drawsFront = document.querySelector("#numbers_draws");
     console.log(drawsFront);
 
     drawsTotals +=1;
-    console.log(drawsTotals)
     drawsFront.innerHTML = drawsTotals;
-    console.log(drawsTotals)
 
     scoreboard ();
 }
@@ -102,6 +103,9 @@ function updateSquare (position) {
 let reset = document.querySelector("#reset");
 reset.addEventListener("click", resetGame)
 
+let resetTwo = document.querySelector("#resetTwo");
+resetTwo.addEventListener("click", resetGame)
+
 function resetGame() {
 
     squares.forEach((square) => {
@@ -119,10 +123,12 @@ function resetGame() {
         gameWin = [];
         playerWin = ""; // adicionado recente
         modal.style.display = "none";
+        modalTwo.style.display = "none";
         result1.classList.remove(symbols[playerTime])
         result2.classList.remove("ball_soccer");
         result2.classList.remove("ball_nfl");
         reset.style.display = "none";
+        resetTwo.style.display = "none";
    
 
     })
