@@ -72,7 +72,7 @@ function drawCount () {
     drawsTotals +=1;
     drawsFront.innerHTML = drawsTotals;
 
-    scoreboard ();
+    // scoreboard ();
 }
 
 
