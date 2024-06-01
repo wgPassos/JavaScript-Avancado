@@ -8,6 +8,7 @@ let result3 = document.querySelector("#result3");
 
 let winsPlayer1 = 0;
 let winsPlayer2 = 0;
+let drawsTotals = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -18,23 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function handleClick(event) {
-
-
-    // console.log(event.target)
     let square = event.target;
     let position = square.id;
 
-    if (handleMove(position)) {
+    let result = handleMove(position);
+    if (result) {
         setTimeout(() => {
-            champion();
-            // alert(`Game over! \nO vencedor foi ${playerTime} de simbolo: ${playerWin}\nJogada ganhadora: campo ${gameWin[0]}, campo ${gameWin[1]} e campo ${gameWin[2]}`)
-
-        }, 10);
-    };
-    // console.log("antes da function");
+            // alert('Game over! It\'s a draw!');
+            if (result === "win") {
+                champion();
+            } else if (result === "draw") {
+                alert('Game over! It\'s a draw!');
+                drawCount();
+                resetGame();
+            }
+        }, 10)
+    }
     updateSquare(position);
-    // console.log("Depois da function");
-
 }
 
 
@@ -42,6 +43,7 @@ function champion () {
     // playerTime += 1;
     // Tentativa de criar placa de vitórias
     //
+    console.log("teste virtoria  na tela")
     result1.innerHTML = playerTime + 1;
     // result2.classList.remove(symb)
     
@@ -59,19 +61,33 @@ function champion () {
     scoreboard ();
 }
 
+function drawCount () {
+
+    let drawsFront = document.querySelector("#numbers_draws");
+    console.log(drawsFront);
+
+    drawsTotals +=1;
+    console.log(drawsTotals)
+    drawsFront.innerHTML = drawsTotals;
+    console.log(drawsTotals)
+
+    scoreboard ();
+}
+
 
 function scoreboard () {
-    let draws = document.querySelector("#draws");
     let victories1 = document.querySelector("#numbers_victories_player1");
     let victories2 = document.querySelector("#numbers_victories_player2");
+
+    console.log(victories1);
 
     if (playerTime == 0) {
         winsPlayer1 +=1;
         victories1.innerHTML = winsPlayer1;
-    } else {
+    } else if (playerTime == 1){
         winsPlayer2 +=1;
         victories2.innerHTML = winsPlayer2;
-    }
+    } 
     
 }
 

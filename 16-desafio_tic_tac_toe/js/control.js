@@ -29,7 +29,13 @@ function handleMove (position) {
         boards[position] = symbols[playerTime];
         playerWin = symbols[playerTime];
 
-        gameOver = isWin();
+        if (isWin()) {
+            return "win";
+        }
+
+        if (isDraw()){
+            return "draw";
+        }
 
         if (gameOver == false) {
             playerTime = (playerTime == 0) ? 1 : 0;
@@ -56,4 +62,15 @@ function isWin () {
         }
     }
     return false;
+}
+
+function isDraw() {
+    for (let i = 0; i < boards.length; i++) {
+        console.log("loop empate")
+        if (boards[i] === "") {
+            console.log(boards[i] + "loop empate")
+            return false;
+        }
+    }
+    return true;
 }
